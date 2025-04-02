@@ -1,0 +1,145 @@
+@import "tailwindcss";
+
+@layer components {
+  .tiptap {
+    :first-child {
+      margin-top: 1rem;
+    }
+    /* Paragraph styles */
+    p {
+      @apply text-lg sm:text-xl overflow-auto tracking-normal;
+    }
+
+    /* List styles */
+    ul {
+      @apply list-disc px-4;
+    }
+    ol {
+      @apply list-decimal px-4 sm:marker:text-xl;
+    }
+    li p {
+      @apply leading-normal;
+    }
+    /* Heading styles */
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      @apply my-2 font-bold text-wrap font-sans;
+    }
+
+    h1,
+    h2 {
+      @apply my-3;
+    }
+
+    h1 {
+      @apply text-5xl;
+    }
+
+    h2 {
+      @apply text-4xl;
+    }
+
+    h3 {
+      @apply text-3xl;
+    }
+
+    h4 {
+      @apply text-2xl;
+    }
+
+    blockquote {
+      @apply border-l-2 pl-4 my-5 border-gray-400 italic;
+    }
+
+    p code {
+      @apply bg-white text-wrap overflow-auto rounded-sm font-mono;
+    }
+    /* Code and preformatted text styles */
+    pre {
+      @apply bg-white border my-1 border-gray-400 overflow-auto rounded-sm px-4 py-2;
+    }
+    pre code {
+      @apply bg-inherit font-mono overflow-auto text-lg sm:text-xl border-none;
+    }
+
+    hr {
+      @apply text-gray-400;
+    }
+  }
+  .blog-content {
+    :first-child {
+      margin-top: 1rem;
+    }
+    /* Paragraph styles */
+    p {
+      @apply text-lg sm:text-xl overflow-auto tracking-normal;
+    }
+
+    /* List styles */
+    ul {
+      @apply list-disc px-4;
+    }
+    ol {
+      @apply list-decimal px-4 sm:marker:text-xl;
+    }
+    li p {
+      @apply leading-normal;
+    }
+    /* Heading styles */
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      @apply my-2 font-bold text-wrap font-sans;
+    }
+
+    h1,
+    h2 {
+      @apply my-3;
+    }
+
+    h1 {
+      @apply text-5xl;
+    }
+
+    h2 {
+      @apply text-4xl;
+    }
+
+    h3 {
+      @apply text-3xl;
+    }
+
+    h4 {
+      @apply text-2xl;
+    }
+
+    blockquote {
+      @apply border-l-2 pl-4 my-5 border-gray-400 italic;
+    }
+
+    p code {
+      @apply bg-white text-wrap overflow-auto rounded-sm font-mono;
+    }
+    /* Code and preformatted text styles */
+    pre {
+      @apply bg-white border my-1 border-gray-400 overflow-auto rounded-sm px-4 py-2;
+    }
+    pre code {
+      @apply bg-inherit font-mono overflow-auto text-lg sm:text-xl border-none;
+    }
+
+    hr {
+      @apply text-gray-400;
+    }
+  }
+  .ProseMirror pre {
+    white-space: pre !important;
+  }
+}

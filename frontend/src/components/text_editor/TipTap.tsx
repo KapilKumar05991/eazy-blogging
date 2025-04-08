@@ -1,10 +1,14 @@
-// src/Tiptap.tsx
-import { useEditor, EditorContent } from "@tiptap/react";
+
+import { useEditor, EditorContent, ReactNodeViewRenderer } from "@tiptap/react";
 import TextAlign from "@tiptap/extension-text-align";
 import StarterKit from "@tiptap/starter-kit";
+import {CodeBlockLowlight} from '@tiptap/extension-code-block-lowlight'
+import CodeBlockComponent from "./CodeBlockComponent";
+import {common,createLowlight} from 'lowlight'
 import MenuBar from "./MenuBar";
 import { memo } from "react";
 
+const lowlight = createLowlight(common)
 // define your extension array
 const extensions = [
   StarterKit.configure({
@@ -22,6 +26,15 @@ const extensions = [
   TextAlign.configure({
     types: ["heading", "paragraph"],
   }),
+  CodeBlockLowlight
+  .extend({
+    addNodeView() {
+      return ReactNodeViewRenderer(CodeBlockComponent)
+    },
+  })
+  .configure({
+    lowlight
+  })
 ];
 const mock = "<h2>Write your thoughts ...</h2>";
 

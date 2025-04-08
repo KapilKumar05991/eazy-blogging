@@ -13,7 +13,7 @@ import { Link } from "react-router";
 const About = () => {
   return (
     <div className="container mx-auto min-h-screen">
-      <main className="max-w-5xl 2xl:max-w-7xl p-6">
+      <main className="mx-auto max-w-5xl 2xl:max-w-7xl p-6">
         {/* Hero Section */}
         <section className="w-full py-4">
           <div className="container px-4 md:px-6">

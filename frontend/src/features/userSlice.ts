@@ -13,7 +13,6 @@ interface state {
 
 const initialState:state = {
     user:{
-
         id:'anonymous',
         name:'',
         role:'',

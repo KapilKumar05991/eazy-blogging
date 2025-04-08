@@ -9,6 +9,7 @@ import NotFound from "./pages/NotFound";
 import { Footer } from "./components/Footer";
 import { Toaster } from "sonner";
 import { Loader2 } from "lucide-react";
+import 'highlight.js/styles/github-dark.css'
 
 const Blogs = lazy(() => import("./pages/Blogs"));
 const Publish = lazy(() => import("./pages/Publish"));

@@ -37,7 +37,7 @@ const BlogDetails = () => {
         <Blog blog={blog} />
       ) : (
         <div className="h-screen flex items-center justify-center">
-          <Loader2 className="animate-spin text-gray-800" size={45} />
+          <Loader2 className="animate-spin" size={45} />
         </div>
       )}
     </div>

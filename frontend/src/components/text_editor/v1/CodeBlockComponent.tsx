@@ -2,7 +2,7 @@ import { NodeViewContent, NodeViewWrapper } from '@tiptap/react'
 
 export default ({ node: { attrs: { language: defaultLanguage } }, updateAttributes, extension }:any) => (
   <NodeViewWrapper className="code-block">
-    <select contentEditable={false} defaultValue={defaultLanguage} onChange={event => updateAttributes({ language: event.target.value })}>
+    <select name='language' contentEditable={false} defaultValue={defaultLanguage} onChange={event => updateAttributes({ language: event.target.value })}>
       <option value={'javascript'}>
         auto
       </option>

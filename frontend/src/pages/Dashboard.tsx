@@ -93,7 +93,7 @@ const Dashboard = () => {
         <div className="flex items-center gap-2 sm:gap-4">
           <Link
             to="/blogs"
-            className="flex rounded-md text-sm sm:text-base gap-1 text-white font-semibold items-center px-3  py-2 bg-gray-900"
+            className="flex rounded-md text-sm sm:text-base gap-1 text-white font-semibold items-center px-3  py-2 bg-slate-600"
           >
             <ArrowLeft size={20} />
             Back
@@ -102,29 +102,29 @@ const Dashboard = () => {
         </div>
         <Link
           to="/publish"
-          className="flex rounded-md text-sm sm:text-base gap-1 text-white font-semibold items-center px-3  py-2 bg-gray-900"
+          className="flex rounded-md text-sm sm:text-base gap-1 text-white font-semibold items-center px-3  py-2 bg-green-600"
         >
           Create New Post
         </Link>
       </div>
       <div className="grid gap-4 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
         {posts.length == 0 ? (
-          <h1 className="text-2xl text-gray-800 font-bold">
+          <h1 className="text-2xl font-bold">
             You have't Create Post Yet. Try Creating New Post.{" "}
           </h1>
         ) : (
           posts.map((blog, index) => (
-            <div key={index} className="w-full">
+            <div key={index} className="w-full bg-white/10">
               <div className=" border border-gray-300 shadow-sm rounded-md w-full h-full p-4 flex flex-col justify-between leading-normal">
                 <div className="mb-4">
-                  <div className="text-sm sm:text-base text-gray-600 flex items-center">
-                    <time dateTime="2025-03-25" className="text-gray-500">
+                  <div className="text-sm sm:text-base flex items-center">
+                    <time dateTime="2025-03-25">
                       {useDate(blog.created_at)}
                     </time>
                     <Dot size={20} />
                     <p>{useReadTime(blog.content)} Min(s) read</p>
                   </div>
-                  <div className="my-1 flex items-center gap-1 flex-wrap">
+                  <div className="my-2 flex items-center gap-1 flex-wrap">
                     {blog.tags.map((tag, index: number) => (
                       <Link
                         to="#"
@@ -135,10 +135,10 @@ const Dashboard = () => {
                       </Link>
                     ))}
                   </div>
-                  <h1 className="text-gray-900 font-bold text-xl sm:text-2xl mb-2">
+                  <h1 className="font-bold text-xl sm:text-2xl mb-2">
                     {blog.title}
                   </h1>
-                  <p className="text-gray-800 sm:text-lg font-serif line-clamp-3">
+                  <p className="line-clamp-3">
                     {blog.description}
                   </p>
                 </div>

@@ -39,14 +39,14 @@ const Signup = () => {
     }
   }
   return (
-    <div className="flex min-h-screen bg-white flex-col justify-center px-6 py-6 lg:px-8">
+    <div className="flex min-h-screen bg-white/10 flex-col justify-center px-6 py-6 lg:px-8">
       <div className="mx-auto sm:w-full sm:max-w-sm">
         <div className="text-center w-full max-w-xs md:max-w-md lg:max-w-lg">
           <Link to={"/"} className="flex justify-center items-center text-2xl sm:text-4xl font-extrabold">
             Eazy
           <Feather size={28} />
           </Link>
-          <h2 className="text-2xl sm:text-3xl font-bold text-gray-900">
+          <h2 className="text-2xl sm:text-3xl font-bold">
             Create an account
           </h2>
         </div>
@@ -79,11 +79,11 @@ const Signup = () => {
             </Button>
         </form>
 
-        <p className="mt-6 text-center w-full max-w-xs md:max-w-md lg:max-w-lg text-gray-500">
+        <p className="mt-6 text-center w-full max-w-xs md:max-w-md lg:max-w-lg">
           Already have an account?
           <Link
             to="/signin"
-            className="font-semibold text-indigo-600 hover:text-indigo-500"
+            className="font-semibold text-indigo-500 hover:text-indigo-400"
           >
             {" "}
             Login

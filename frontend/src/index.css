@@ -1,142 +1,16 @@
 @import "tailwindcss";
-@layer components {
-  .tiptap :first-child {
-    margin-top: 1rem;
-  }
-  /* Paragraph styles */
-  .tiptap p {
-    @apply text-lg sm:text-xl overflow-auto tracking-normal;
-  }
+@import "@/styles/_variables.scss";
+@import "@/styles/_keyframe-animations.scss";
 
-  /* List styles */
-  .tiptap ul {
-    @apply list-disc px-4;
-  }
-  .tiptap ol {
-    @apply list-decimal px-4 sm:marker:text-xl;
-  }
-  .tiptap li p {
-    @apply leading-normal;
-  }
-  /* Heading styles */
-  .tiptap h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6 {
-    @apply my-2 font-bold text-wrap font-sans;
-  }
-
-  .tiptap h1,
-  h2 {
-    @apply my-3;
-  }
-
-  .tiptap h1 {
-    @apply text-4xl;
-  }
-
-  .tiptap h2 {
-    @apply text-3xl;
-  }
-
-  .tiptap h3 {
-    @apply text-2xl;
-  }
-
-  .tiptap h4 {
-    @apply text-xl;
-  }
-
-  .tiptap blockquote {
-    @apply border-l-2 pl-4 my-5 border-gray-400 italic;
-  }
-
-  .tiptap p code {
-    @apply bg-white sm:text-lg text-gray-800 text-wrap overflow-auto rounded-sm font-mono;
-  }
-  /* Code and preformatted text styles */
-  .tiptap pre {
-    @apply  border overflow-auto
-     my-1 px-4 pt-6 pb-2 sm:pt-2;
-  }
-  .tiptap pre code {
-    @apply font-mono !whitespace-pre sm:text-lg border-none;
-  }
-  .tiptap .code-block {
-    @apply relative  rounded-lg text-white bg-[#0d1117];
-  }
-  .tiptap .code-block div {
-    @apply m-0 ;
-  }
-  .tiptap .code-block select {
-    @apply mt-0 border-none rounded-sm absolute bg-white text-black top-0.5 right-0.5
-  }
-  .tiptap hr {
-    @apply text-gray-400;
-  }
-  .blog-content :first-child {
-    @apply mt-4;
-  }
-  /* Paragraph styles */
-  .blog-content p {
-    @apply text-lg md:text-xl overflow-auto tracking-normal;
-  }
-  /* List styles */
-  .blog-content ul {
-    @apply list-disc px-4;
-  }
-  .blog-content ol {
-    @apply list-decimal px-4 sm:marker:text-xl;
-  }
-  .blog-content li p {
-    @apply leading-normal;
-  }
-  /* Heading styles */
-  .blog-content h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6 {
-    @apply my-2 font-bold text-wrap font-sans;
-  }
-
-  .blog-content h1 {
-    @apply text-4xl;
-  }
-  .blog-content h2 {
-    @apply text-3xl;
-  }
-
-  .blog-content h3 {
-    @apply text-2xl;
-  }
-
-  .blog-content h4 {
-    @apply text-xl;
-  }
-
-  .blog-content blockquote {
-    @apply border-l-2 pl-4 my-5 border-gray-400 italic;
-  }
-  
-  .blog-content p code {
-    @apply bg-white sm:text-lg text-gray-800 font-mono text-wrap overflow-auto rounded-sm;
-  }
-  /* Code and preformatted text styles */
-  .blog-content pre {
-    @apply my-1 relative;
-  }
-
-  .blog-content pre code {
-    @apply font-mono rounded-lg text-base md:text-lg;
-  }
-  .blog-content pre button {
-    @apply absolute bg-blue-600 top-0 right-0 sm:top-4 sm:right-4 px-2.5 py-1 text-xs sm:text-sm rounded-sm border-none cursor-pointer;
-  }
-  .blog-content hr {
-    @apply text-gray-400;
-  }
+.code-block {
+  @apply relative;
 }
+
+.code-block select {
+  @apply m-0.5 border-none rounded-sm absolute bg-zinc-500 text-white top-0.5 left-0.5;
+}
+
+.copy-button {
+  @apply m-0.5 absolute scale-110 text-white top-3 right-3 hover:cursor-pointer;
+}
+

@@ -1,6 +1,5 @@
 import { FormEvent, useEffect, useState } from "react";
 import Button from "../components/Button";
-import Tiptap from "../components/text_editor/TipTap";
 import { BACKEND_URL } from "../config";
 import axios from "axios";
 import { Angry, Loader2, X } from "lucide-react";
@@ -16,6 +15,7 @@ import { toast } from "sonner";
 import { fetchUserBlogs } from "../features/userSlice";
 import { BlogUpdateInput } from "../common/index";
 import LabelledInput from "../components/LabelledInput";
+import SimpleTextEditor from "../components/text_editor/v2/SimpleTextEditor";
 
 const Edit = () => {
   const { id } = useParams();
@@ -52,7 +52,7 @@ const Edit = () => {
   if (loading) {
     return (
       <div className="h-screen flex items-center justify-center">
-        <Loader2 className="animate-spin text-gray-800" size={45} />
+        <Loader2 className="animate-spin" size={45} />
       </div>
     );
   }
@@ -120,11 +120,11 @@ const Edit = () => {
         onSubmit={(e: FormEvent<HTMLFormElement>) => {
           e.preventDefault();
         }}
-        className="border bg-white mt-4 p-6 space-y-4 rounded-md shadow-md border-gray-400"
+        className="relative border bg-white/10 mt-4 p-6 space-y-4 rounded-md shadow-md border-gray-400"
       >
         <div>
           <h1 className="text-3xl sm:text-4xl font-bold">Edit Blog post</h1>
-          <p className="text-sm sm:text-base text-gray-600">
+          <p className="text-sm sm:text-base">
             Update your blog post details below.
           </p>
         </div>
@@ -176,7 +176,7 @@ const Edit = () => {
           </div>
         </div>
         <div>
-          <Tiptap content={blog.content} setContent={setContent} />
+          <SimpleTextEditor setContent={setContent} content={blog.content}/>
         </div>
         <div className="flex gap-4">
           <Button

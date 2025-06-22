@@ -82,10 +82,10 @@ const Profile = () => {
     <div className="container max-w-5xl 2xl:max-w-7xl min-h-screen p-8 sm:p-12 m-auto">
       {markDelete && <Dialog dialog={data}/>}
       <h1 className="text-3xl sm:text-4xl font-bold">Profile</h1>
-      <p className="text-sm sm:text-base text-gray-600">
+      <p className="text-sm sm:text-base">
         Manage your profile information and how others see you on blog.
       </p>
-      <div className="border mt-4 p-6 bg-white rounded-md border-gray-300">
+      <div className="border mt-4 p-6 bg-white/20 rounded-md border-gray-300">
         <h2 className="text-2xl sm:text-3xl font-semibold">Profile Information</h2>
         <form onSubmit={(e)=>{e.preventDefault()}} className=" space-y-4">
           <div className="mt-2">
@@ -96,7 +96,7 @@ const Profile = () => {
               placeholder='eg. Jhon Doe'
               onChange={handleChange}
             />
-            <p className="text-sm sm:text-base text-gray-600">
+            <p className="text-sm sm:text-base">
               This is your public display name
             </p>
           </div>
@@ -108,7 +108,7 @@ const Profile = () => {
               placeholder={'eg. Artist'}
               onChange={handleChange}
             />
-            <p className="text-sm sm:text-base text-gray-600">
+            <p className="text-sm sm:text-base">
               your role in the blog community.
             </p>
           </div>
@@ -119,7 +119,7 @@ const Profile = () => {
              label="Bio"
              placeholder="Tell short intro about yourself"
              onChange={handleChange}/>
-            <p className="text-sm sm:text-base text-gray-600">
+            <p className="text-sm sm:text-base">
               Write a short bio to introduce yourself to other blog readers.
             </p>
           </div>

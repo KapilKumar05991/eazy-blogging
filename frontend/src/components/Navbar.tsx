@@ -33,14 +33,14 @@ const Navbar = () => {
   const letters = useLetter(name)
 
   return (
-    <nav className="bg-slate-50 border-b-1 shadow-sm border-gray-400">
+    <nav className="border-b-1 shadow-sm border-gray-400">
       <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
         <div className="relative flex h-16 items-center justify-between">
           <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
             {/* <!-- Mobile menu button--> */}
             <button
               type="button"
-              className="relative inline-flex items-center justify-center rounded-md p-2 hover:bg-gray-300"
+              className="relative inline-flex items-center justify-center rounded-md p-2 hover:bg-violet-500"
               onClick={() => setIsOpen(!isOpen)}
             >
               {isOpen ? <X size={24} /> : <Menu size={24} />}
@@ -58,19 +58,19 @@ const Navbar = () => {
               <div className="flex space-x-4">
                 <Link
                   to="/blogs"
-                  className="rounded-md px-3 py-2 text-lg font-medium hover:bg-slate-200"
+                  className="rounded-md px-3 py-2 text-lg font-medium hover:bg-violet-500 hover:text-white"
                 >
                   Blogs
                 </Link>
                 <Link
                   to="/blogs"
-                  className="rounded-md px-3 py-2 text-lg font-medium hover:bg-slate-200"
+                  className="rounded-md px-3 py-2 text-lg font-medium hover:bg-violet-500 hover:text-white"
                 >
                   Latest
                 </Link>
                 <Link
                   to="/about"
-                  className="rounded-md px-3 py-2 text-lg font-medium hover:bg-slate-200"
+                  className="rounded-md px-3 py-2 text-lg font-medium hover:bg-violet-500 hover:text-white"
                 >
                   About
                 </Link>
@@ -80,7 +80,7 @@ const Navbar = () => {
           <div className="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
             {/* <!-- Profile dropdown --> */}
             {active?
-            <div className="relative ml-3">
+            <div className="relative ml-3 z-20">
               <div>
                 <button
                   className="cursor-pointer"
@@ -141,21 +141,21 @@ const Navbar = () => {
             <Link
               to="/blogs"
               onClick={() => setIsOpen(false)}
-              className="block rounded-md hover:bg-gray-200 px-3 py-2 text-base font-medium"
+              className="block rounded-md hover:bg-violet-500 px-3 py-2 text-base font-medium"
             >
               Blogs
             </Link>
             <Link
               to="blogs"
               onClick={() => setIsOpen(false)}
-              className="block rounded-md hover:bg-gray-200 px-3 py-2 text-base font-medium"
+              className="block rounded-md hover:bg-violet-500 px-3 py-2 text-base font-medium"
             >
               Latest
             </Link>
             <Link
               to="/about"
               onClick={() => setIsOpen(false)}
-              className="block rounded-md hover:bg-gray-200 px-3 py-2 text-base font-medium"
+              className="block rounded-md hover:bg-violet-500 px-3 py-2 text-base font-medium"
             >
               About
             </Link>

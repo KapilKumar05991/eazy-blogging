@@ -8,6 +8,7 @@ import {common,createLowlight} from 'lowlight'
 import MenuBar from "./MenuBar";
 import { memo } from "react";
 
+
 const lowlight = createLowlight(common)
 // define your extension array
 const extensions = [

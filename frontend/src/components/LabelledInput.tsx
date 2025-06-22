@@ -22,7 +22,7 @@ const LabelledInput: React.FC<LabelledInputProps> = ({
 }) => {
   return (
     <div className={clsx("w-full max-w-xs md:max-w-md lg:max-w-lg", className)}>
-      <label htmlFor={label} className="block text-gray-700 text-sm md:text-base font-medium mb-2">
+      <label htmlFor={label} className="block text-sm md:text-base font-medium mb-2">
         {label}
       </label>
       <input

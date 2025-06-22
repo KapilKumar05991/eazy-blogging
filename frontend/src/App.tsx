@@ -11,6 +11,14 @@ import { Toaster } from "sonner";
 import { Loader2 } from "lucide-react";
 import 'highlight.js/styles/github-dark.css'
 
+// Imports for styling
+import "@/components/tiptap-templates/simple/simple-editor.scss"
+import "@/components/tiptap-node/code-block-node/code-block-node.scss"
+import "@/components/tiptap-node/list-node/list-node.scss"
+import "@/components/tiptap-node/image-node/image-node.scss"
+import "@/components/tiptap-node/paragraph-node/paragraph-node.scss"
+
+
 const Blogs = lazy(() => import("./pages/Blogs"));
 const Publish = lazy(() => import("./pages/Publish"));
 const BlogDetails = lazy(() => import("./pages/BlogDetails"));
@@ -19,10 +27,11 @@ const Dashboard = lazy(() => import("./pages/Dashboard"));
 const About = lazy(() => import("./pages/About"));
 const Edit = lazy(() => import("./pages/Edit"));
 
+
 function App() {
   const active = useAppSelector((state) => state.user.active);
   return (
-    <div className="bg-slate-50">
+    <div>
       <Toaster
         toastOptions={{
           style: {

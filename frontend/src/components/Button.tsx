@@ -25,7 +25,7 @@ const Button:React.FC<ButtonProps> = ({ onClick,
     primary: "bg-blue-600 text-white hover:bg-blue-700 focus:ring-blue-400",
     secondary: "bg-gray-800 text-white hover:bg-gray-700 focus:ring-gray-400",
     danger: "bg-red-600 text-white hover:bg-red-700 focus:ring-red-400",
-    outline: "border border-gray-400 text-gray-600 hover:bg-gray-100 focus:ring-gray-400",
+    outline: "border border-gray-400 text-gray-600 bg-gray-100 hover:bg-gray-200 focus:ring-gray-400",
   };
   return (
     <button

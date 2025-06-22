@@ -16,10 +16,10 @@ const BlogCard = ({ blog }: Props) => {
   const letters = useLetter(blog.author.name);
   const readTime = useReadTime(blog.content);
   return (
-    <article className="flex max-w-5xl 2xl:max-w-7xl flex-col items-start justify-between">
-      <div className="hover:scale-105 transition-all delay-100">
+    <article className="flex max-w-5xl 2xl:max-w-7xl flex-col items-start justify-between bg-white/10 py-2 px-4 rounded-md">
+      <div className="transition all ease-in-out hover:scale-105">
         <div className="text-sm sm:text-base">
-          <div className="flex text-gray-600">
+          <div className="flex">
             <time dateTime="2025-03-25">{date}</time>
             <p className="flex">
               <Dot size={20} /> {readTime} Min(s) read
@@ -42,7 +42,7 @@ const BlogCard = ({ blog }: Props) => {
             <h3 className="mt-2 text-2xl sm:text-3xl font-bold line-clamp-3">
               {blog.title}
             </h3>
-            <p className="mt-4 text-base sm:text-xl text-gray-800 font-serif line-clamp-3">
+            <p className="mt-4 text-base line-clamp-3">
               {blog.description}
             </p>
           </div>
@@ -55,11 +55,11 @@ const BlogCard = ({ blog }: Props) => {
           {letters}
         </span>
         <div className="text-sm sm:text-base">
-          <p className="font-semibold text-gray-900">
+          <p className="font-semibold">
             <span className="text-inherit"></span>
             {blog.author.name}
           </p>
-          <p className="text-gray-700">{blog.author.role}</p>
+          <p>{blog.author.role}</p>
         </div>
       </div>
     </article>

@@ -1,6 +1,5 @@
 import { FormEvent, useState } from "react";
 import Button from "../components/Button";
-import Tiptap from "../components/text_editor/TipTap";
 import { BACKEND_URL } from "../config";
 import axios from "axios";
 import { X } from "lucide-react";
@@ -11,6 +10,7 @@ import { toast } from "sonner";
 import { BlogCreateInput } from "../common/index";
 import LabelledInput from "../components/LabelledInput";
 import { clearBlogSlice } from "../features/blogSlice";
+import SimpleTextEditor from '../components/text_editor/v2/SimpleTextEditor'
 
 const Publish = () => {
   const dispatch = useAppDispatch();
@@ -65,13 +65,13 @@ const Publish = () => {
         onSubmit={(e: FormEvent<HTMLFormElement>) => {
           e.preventDefault();
         }}
-        className="border bg-white mt-4 p-6 space-y-4 rounded-md shadow-md border-gray-400"
+        className="border bg-white/20 mt-4 p-6 space-y-4 rounded-md shadow-md border-gray-400"
       >
         <div>
           <h1 className="text-3xl sm:text-4xl font-bold">
             Create new blog post
           </h1>
-          <p className="text-sm sm:text-base text-gray-600">
+          <p className="text-sm sm:text-base">
             Fill in the details below to publish a new blog post.
           </p>
         </div>
@@ -83,7 +83,7 @@ const Publish = () => {
             value={title}
             className="sm:min-w-full"
           />
-          <p className="text-sm md:text-base text-gray-600">
+          <p className="text-sm md:text-base">
             Main title of the blog post *
           </p>
         </div>
@@ -95,7 +95,7 @@ const Publish = () => {
             onChange={(e) => setDescription(e.target.value)}
             className="sm:min-w-full"
           />
-          <p className="text-sm md:text-base text-gray-600">
+          <p className="text-sm md:text-base">
             Write a objective of blog or short summary *
           </p>
         </div>
@@ -129,10 +129,10 @@ const Publish = () => {
                 </span>
               ))}
           </div>
-          <p className="text-sm md:text-base mt-1 text-gray-600">Add relevent tags (Maximum-3)</p>
+          <p className="text-sm md:text-base mt-1">Add relevent tags (Maximum-3)</p>
         </div>
         <div>
-          <Tiptap setContent={setContent} />
+          <SimpleTextEditor setContent={setContent}/>
         </div>
         <div className="flex gap-4">
           <Button

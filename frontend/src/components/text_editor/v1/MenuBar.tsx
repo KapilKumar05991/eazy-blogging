@@ -137,7 +137,7 @@ const MenuBar = ({ editor }: Prop) => {
     },
   ];
   return (
-    <div className="p-1 border-1 border-slate-300 rounded-md bg-slate-100">
+    <div className="sticky top-0 z-10 p-1 border-1 border-slate-300 rounded-md bg-slate-100">
       <div className="flex flex-wrap justify-center items-center">
         {Options.map((option, index) => (
           <button

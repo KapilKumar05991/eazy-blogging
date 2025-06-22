@@ -29,15 +29,15 @@ const Blogs = () => {
     <div className="container min-h-screen mx-auto py-16 sm:py-24">
       <div className="mx-auto max-w-5xl px-6 lg:px-8">
         <div className="mx-auto max-w-2xl lg:mx-0">
-          <h2 className="text-3xl sm:text-5xl font-bold tracking-tight text-pretty text-gray-900">
+          <h2 className="text-3xl sm:text-5xl font-bold tracking-tight text-pretty">
             Popular Blogs of the Day
           </h2>
-          <p className="mt-2 text-lg text-gray-600">
+          <p className="mt-2 text-lg">
             Learn how to grow your business with our expert advice.
           </p>
         </div>
         {!loading ? (
-          <div className="mx-auto mt-8 grid max-w-2xl grid-cols-1 gap-x-8 gap-y-10 border-t border-gray-300 pt-8 sm:mt-6 sm:pt-10 lg:mx-0 lg:max-w-none lg:grid-cols-2">
+          <div className="mx-auto mt-8 grid max-w-2xl grid-cols-1 gap-x-6 gap-y-6 border-t border-gray-300 pt-8 sm:mt-6 sm:pt-10 lg:mx-0 lg:max-w-none lg:grid-cols-2">
             {/* all blogs */}
             {blogs.map((blog, index) => (
               <BlogCard key={index} blog={blog} />
@@ -45,7 +45,7 @@ const Blogs = () => {
           </div>
         ) : (
           <div className="h-[60vh] flex items-center justify-center">
-            <Loader2 className="animate-spin text-gray-800" size={45} />
+            <Loader2 className="animate-spin" size={45} />
           </div>
         )}
       </div>
